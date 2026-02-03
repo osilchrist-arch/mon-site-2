@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Badou Christ Yohann</title>
+    <style>
+        :root {
+            --primary: #1E90FF;    /* Bleu Ambition */
+            --secondary: #5D4037;  /* Marron Entrepreneur */
+            --accent: #D2B48C;     /* Tan pour la fluidité */
+            --bg: #FAF9F6;         /* Blanc cassé pour le confort visuel */
+            --text: #2D1B17;       /* Marron très sombre pour la lecture */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 5rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            margin-bottom: 2rem;
+        }
+
+        header h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        header p { font-size: 1.4rem; font-weight: 300; max-width: 700px; margin: 0 auto; }
+
+        main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+        /* --- SECTIONS --- */
+        section { margin-bottom: 5rem; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        section.visible { opacity: 1; transform: translateY(0); }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        h2::after { content: ""; flex: 1; height: 2px; background: var(--accent); }
+
+        /* --- ARGUMENTATION DES OBJECTIFS --- */
+        .objective-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-bottom: 5px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+        }
+        .card:hover { transform: translateY(-10px); border-bottom-color: var(--primary); box-shadow: 0 15px 40px rgba(30, 144, 255, 0.2); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; }
+
+        /* --- PASSION TEXTE --- */
+        .passion-content {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .passion-text { flex: 2; min-width: 300px; }
+        .passion-text blockquote { font-style: italic; border-left: 4px solid var(--primary); padding-left: 20px; margin: 1rem 0; font-size: 1.2rem; }
+
+        /* --- CERTIFICATIONS INTERACTIVES --- */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .cert-card {
+            background: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid var(--accent);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .cert-card:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-top: 4rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .passion-content { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Badou Christ Yohann</h1>
+        <p>Architecte du numérique & Entrepreneur engagé pour l'émergence africaine</p>
+    </header>
+
+    <main>
+        <section id="objectifs">
+            <h2>Mes Objectifs Stratégiques</h2>
+            <div class="objective-box">
+                <div class="card">
+                    <h3>Souveraineté Numérique</h3>
+                    <p>Mon objectif principal est de concevoir des solutions logicielles adaptées aux réalités locales. Je crois fermement que le développement de mon pays passe par une indépendance technologique totale.</p>
+                </div>
+                <div class="card">
+                    <h3>Leadership Entrepreneurial</h3>
+                    <p>Je ne veux pas seulement être développeur, mais un créateur d'emplois. Mon ambition est de bâtir une entreprise qui propulsera les jeunes talents africains sur la scène mondiale.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovation Inclusive</h3>
+                    <p>Utiliser l'IA et le Cloud pour simplifier l'accès à l'éducation et à la santé. Chaque ligne de code que j'écris doit avoir un impact social positif.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="passions">
+            <h2>Ma Passion : Créer de rien</h2>
+            <div class="passion-content">
+                <div class="passion-text">
+                    <p>Pour moi, coder n'est pas qu'un travail, c'est un art. Ma passion réside dans la transformation d'une simple idée abstraite en un outil fonctionnel qui change la vie des gens.</p>
+                    <blockquote>"Le code est le langage avec lequel je construis l'avenir."</blockquote>
+                    <p>Je suis fasciné par la vitesse à laquelle la technologie évolue et je consacre chaque jour à maîtriser de nouveaux outils pour rester à la pointe de l'innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifs">
+            <h2>Expertise Certifiée</h2>
+            <p style="margin-bottom: 20px;">Maîtrise de l'écosystème Google Cloud (Promo 2025) :</p>
+            <div class="cert-grid">
+                <a href="https://coursera.org/verify/BV1X90OUWTCO" target="_blank" class="cert-card">Google Docs</a>
+                <a href="https://coursera.org/verify/UDAZW0N4NI11" target="_blank" class="cert-card">Google Drive</a>
+                <a href="https://coursera.org/verify/LPJ3V0AB385D" target="_blank" class="cert-card">Google Sheets</a>
+                <a href="https://coursera.org/verify/7TCN77J120ΡΗ" target="_blank" class="cert-card">Google Slides</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prêt pour la prochaine révolution numérique.</p>
+        <p>&copy; 2026 Badou Christ Yohann - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Interaction : Apparition au défilement (Scroll Reveal)
+        const sections = document.querySelectorAll('section');
+        const observerOptions = { threshold: 0.2 };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
